@@ -10,7 +10,26 @@
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <ul class="gallery"></ul>
+    <ul class="gallery gallery-flex"></ul>
+
+    <style>
+      .gallery-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+      }
+
+      .gallery-flex li {
+        margin: 10px;
+        width: 200px;
+      }
+
+      .gallery-flex img {
+        width: 100%;
+      }
+    </style>
 
     <script src="js/task-03.js" type="module"></script>
   </body>

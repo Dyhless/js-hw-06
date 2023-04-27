@@ -24,16 +24,10 @@ const images = [
   },
 ];
 
-const imagesGallery = document.querySelector('#gallery');
+const imagesList = images.map(({url, alt}) => `<li><img src = "${url}" alt="${alt}"></li>`).join('');
 
-const imageOne = document.createElement('li');
-imageOne.src = 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
-imageOne.alt = 'White and Black Long Fur Cat';
+const imagesGallery = document.querySelector('.gallery-flex');
 
-const imageTwo = document.createElement('li');
-imageTwo.src = 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
-imageTwo.alt = 'Orange and White Koi Fish Near Yellow Koi Fish';
+imagesGallery.insertAdjacentHTML('afterbegin', imagesList);
 
-const imageThree = document.createElement('li');
-imageThree.src = 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
-imageThree.alt = 'Group of Horses Running';
+console.log(imagesGallery);
