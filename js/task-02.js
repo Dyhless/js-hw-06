@@ -59,8 +59,7 @@ const ingredients = [
 // console.log(ingredientsEl);
 
 
-
-// создание элементов с помошью метода forEach
+// Создание элементов с помошью метода forEach
 
 const ingredientsEl = document.getElementById('ingredients');
 
