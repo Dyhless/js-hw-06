@@ -25,9 +25,8 @@ console.log(`Number of categories: ${categoriesNumber.length}`);
 Array.from(categoriesNumber).forEach((category) => {
 
    const categoryName = category.querySelector('h2').textContent;
-   const elementsNumber = category.getElementsByTagName('li').length;
-   
    console.log(`Category: ${categoryName}`);
+
+   const elementsNumber = category.getElementsByTagName('li').length;
    console.log(`Elements: ${elementsNumber}`);
-   
 });
