@@ -11,3 +11,13 @@
 // Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
 // Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
+
+const validationIntput = document.getElementById('validation-input');
+
+validationIntput.addEventListener('focus', () =>
+   console.log('Інпут набув фокус')
+);
+
+validationIntput.addEventListener('blur', () =>
+   console.log('Інпут втратив фокус')
+);
