@@ -12,10 +12,6 @@ inputChange.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
    console.log(event.currentTarget.value);
-   inputChange.textContent = event.currentTarget.value;
-
-   if (inputChange === ' ') {
-      inputChange.textContent = 'Anonymous';
-   }
+   inputChange.textContent = event.currentTarget.value
 }
 
