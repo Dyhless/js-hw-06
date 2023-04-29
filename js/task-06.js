@@ -12,12 +12,22 @@
 // Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
-const validationIntput = document.getElementById('validation-input');
 
-validationIntput.addEventListener('focus', () =>
+const validationInput = document.getElementById('validation-input');
+
+validationInput.addEventListener('focus', () =>
    console.log('Інпут набув фокус')
 );
 
-validationIntput.addEventListener('blur', () =>
+validationInput.addEventListener('blur', () => {
    console.log('Інпут втратив фокус')
-);
+  if (validationInput.value.length !== Number(validationInput.dataset.length)) {
+      validationInput.classList.add('invalid');
+      validationInput.classList.remove('valid');
+      console.log('Значення некорректне')
+  } else {
+      validationInput.classList.add('valid');
+      validationInput.classList.remove('invalid');
+      console.log('Значення корректне')
+  }
+});
