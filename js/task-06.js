@@ -20,14 +20,19 @@ validationInput.addEventListener('focus', () =>
 );
 
 validationInput.addEventListener('blur', () => {
-   console.log('Інпут втратив фокус')
-  if (validationInput.value.length !== Number(validationInput.dataset.length)) {
-      validationInput.classList.add('invalid');
-      validationInput.classList.remove('valid');
-      console.log('Значення некорректне')
+    console.log('Інпут втратив фокус')
+    
+    if (validationInput.value.length !== Number(validationInput.dataset.length)) {
+      
+        validationInput.classList.add('invalid');
+        validationInput.classList.remove('valid');
+
+    console.log('Значення некорректне')
+
   } else {
-      validationInput.classList.add('valid');
-      validationInput.classList.remove('invalid');
-      console.log('Значення корректне')
+        validationInput.classList.add('valid');
+        validationInput.classList.remove('invalid');
+        
+    console.log('Значення корректне')
   }
 });
