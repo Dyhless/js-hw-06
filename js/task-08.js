@@ -21,23 +21,29 @@
 
 
 const loginForm = document.querySelector('.login-form');
-// console.dir(loginForm.elements.email);
-// console.dir(loginForm.elements.password); 
 
 loginForm.addEventListener('submit', onSubmit);
-loginForm.elements.email.addEventListener('email', onEmail);
-loginForm.elements.password.addEventListener('password', onPassword);
 
 function onSubmit(event) {
-   event.preventDefault();
-   
-   
-} 
+  event.preventDefault();
+  
+  const emailInput = loginForm.elements.email;
+  const passwordInput = loginForm.elements.password;
 
-function onEmail(event) {
-   console.dir(loginForm.elements.email.value);
+  if (emailInput.value === '' || passwordInput.value === '') {
+    alert('Please fill in all fields');
+    return;
+  }
+  
+  const formData = [...loginForm.elements].reduce((acc, field) => {
+    if (field.name) {
+      acc[field.name] = field.value;
+    }
+    return acc;
+  }, {});
+  
+  console.log(formData);
+  
+  loginForm.reset();
 }
-
-function onPassword(event) {
-   console.dir(loginForm.elements.password.value);
-}
+  
