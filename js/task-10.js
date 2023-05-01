@@ -24,11 +24,6 @@ function getRandomHexColor() {
 // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
 
 
-// СПИСАВ, АЛЕ ПРАЦЮЄ 
-
-
-
-
 const numberInput = document.querySelector('input[type="number"]');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
