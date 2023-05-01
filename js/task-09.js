@@ -14,16 +14,17 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const widget = document.querySelector('.widget'); 
-const onChangeColor = document.querySelector('.change-color');
+const body = document.querySelector('body'); 
+const changeColor = document.querySelector('.change-color');
 const valueColor = document.querySelector('.color');
 
-  // change background color
-onChangeColor.addEventListener('click', () => {
-  document.body.style.backgroundColor = getRandomHexColor();
-  valueColor.textContent = getRandomHexColor();
+changeColor.addEventListener('click', onChangeColor);
 
-  // show color value 
-  console.log('Background color: ', getRandomHexColor());
-});
+function onChangeColor() {
+  const randomColor = getRandomHexColor();
+  body.style.backgroundColor = randomColor;
+  valueColor.textContent = randomColor;
+  console.log(randomColor);
+}
+
 
