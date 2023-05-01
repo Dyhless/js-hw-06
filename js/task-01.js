@@ -18,7 +18,7 @@
 // Elements: 5
 
 
-const categoriesNumber = document.getElementById('categories').children;
+const categoriesNumber = document.body.firstElementChild.nextSibling.children;
 
 console.log(`Number of categories: ${categoriesNumber.length}`);
 
