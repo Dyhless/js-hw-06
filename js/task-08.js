@@ -29,17 +29,20 @@ function onSubmit(event) {
   
   const emailInput = loginForm.elements.email;
   const passwordInput = loginForm.elements.password;
-
+   
   if (emailInput.value === '' || passwordInput.value === '') {
-    alert('Please fill in all fields');
-    return;
+      alert('Please fill in all fields');
+     
+      return;
   }
   
-  const formData = [...loginForm.elements].reduce((acc, field) => {
-    if (field.name) {
+   const formData = [...loginForm.elements].reduce((acc, field) => {
+     
+      if (field.name) {
       acc[field.name] = field.value;
     }
-    return acc;
+      
+      return acc;
   }, {});
   
   console.log(formData);
