@@ -20,12 +20,10 @@ const valueColor = document.querySelector('.color');
 
   // change background color
 onChangeColor.addEventListener('click', () => {
- 
-});
+  document.body.style.backgroundColor = getRandomHexColor();
+  valueColor.textContent = getRandomHexColor();
 
   // show color value 
-valueColor.addEventListener('click', (getRandomHexColor) => {
-
-
-  console.log(getRandomHexColor);
+  console.log('Background color: ', getRandomHexColor());
 });
+
