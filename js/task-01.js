@@ -18,15 +18,34 @@
 // Elements: 5
 
 
-const categoriesNumber = document.getElementById('categories').children;
+// const categoriesNumber = document.getElementById('categories').children;
+// console.log(`Number of categories: ${categoriesNumber.length}`);
 
-console.log(`Number of categories: ${categoriesNumber.length}`);
+// Array.from(categoriesNumber).forEach((category) => {
 
-Array.from(categoriesNumber).forEach((category) => {
+//    const categoryName = category.querySelector('h2').textContent;
+//    console.log(`Category: ${categoryName}`);
 
-   const categoryName = category.querySelector('h2').textContent;
-   console.log(`Category: ${categoryName}`);
+//    const elementsNumber = category.getElementsByTagName('li').length;
+//    console.log(`Elements: ${elementsNumber}`);
+// });
 
-   const elementsNumber = category.getElementsByTagName('li').length;
-   console.log(`Elements: ${elementsNumber}`);
-});
+
+
+
+const categoriesList = document.body.firstElementChild.nextElementSibling.children;
+console.log("Number of categories:", categoriesList.length);
+console.log('');
+
+const newArrayChildren = [...categoriesList];
+
+newArrayChildren.forEach(category => {
+
+   const localTitle = category.querySelector('h2').textContent;
+   const quantityOfLi = category.querySelectorAll('li').length;
+   
+   console.log('Category:', localTitle);
+   console.log('Elements:', quantityOfLi);
+   console.log('');
+
+})
