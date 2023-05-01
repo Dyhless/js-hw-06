@@ -24,6 +24,38 @@ function getRandomHexColor() {
 // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
 
 
+// const numberInput = document.querySelector('input[type="number"]');
+// const createBtn = document.querySelector('[data-create]');
+// const destroyBtn = document.querySelector('[data-destroy]');
+// const boxes = document.getElementById('boxes');
+
+// createBtn.addEventListener('click', () => {
+//   const amount = Number(numberInput.value);
+//   createBoxes(amount);
+// });
+
+// destroyBtn.addEventListener('click', destroyBoxes);
+
+// function createBoxes(amount, boxSize = 30) {
+//   const boxesToAdd = new Array(amount).fill().map((_, i) => {
+//     const size = boxSize + i * 10;
+//     const box = document.createElement("div");
+//     box.style.width = `${size}px`;
+//     box.style.height = `${size}px`;
+//     box.style.backgroundColor = getRandomHexColor();
+//     box.classList.add("created-box");
+//     box.textContent = `Box ${i + 1}`;
+//     return box.outerHTML;
+//   });
+//   boxes.innerHTML = boxesToAdd.join("");
+// }
+
+// function destroyBoxes() {
+//   boxes.innerHTML = "";
+// }
+
+
+
 const numberInput = document.querySelector('input[type="number"]');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
