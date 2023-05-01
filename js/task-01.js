@@ -18,8 +18,8 @@
 // Elements: 5
 
 
-const categoriesNumber = document.getElementById('categories').children;
-console.log(`Number of categories: ${categoriesNumber.length}`);
+const categoriesNumber = document.body.firstElementChild.nextElementSibling.children;
+console.log('Number of categories:', categoriesNumber.length);
 
 Array.from(categoriesNumber).forEach((category) => {
 
@@ -29,6 +29,4 @@ Array.from(categoriesNumber).forEach((category) => {
    const elementsNumber = category.getElementsByTagName('li').length;
    console.log(`Elements: ${elementsNumber}`);
 });
-
-
 
