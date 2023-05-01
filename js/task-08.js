@@ -32,7 +32,7 @@ function onSubmit(event) {
    
   if (emailInput.value === '' || passwordInput.value === '') {
 
-      return alert('Please fill in all fields');
+      return alert('Всі поля будь ласка');
   }
   
    const formData = [...loginForm.elements].reduce((acc, field) => {
