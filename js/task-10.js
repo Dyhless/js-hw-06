@@ -37,17 +37,25 @@ createBtn.addEventListener('click', () => {
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount, boxSize = 30) {
-  const boxesToAdd = new Array(amount).fill().map((_, i) => {
+  const boxesToAdd = [];
+  
+  for (let i = 0; i < amount; i++) {
     const size = boxSize + i * 10;
-    const box = document.createElement("div");
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomHexColor();
-    box.classList.add("created-box");
-    box.textContent = `Box ${i + 1}`;
-    return box.outerHTML;
-  });
+    const box = createBox(size, i + 1);
+    boxesToAdd.push(box);
+  }
+  
   boxes.innerHTML = boxesToAdd.join("");
+}
+
+function createBox(size, number) {
+  const box = document.createElement("div");
+  box.style.width = `${size}px`;
+  box.style.height = `${size}px`;
+  box.style.backgroundColor = getRandomHexColor();
+  box.classList.add("created-box");
+  box.textContent = `Box ${number}`;
+  return box.outerHTML;
 }
 
 function destroyBoxes() {
