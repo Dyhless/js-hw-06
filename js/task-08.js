@@ -31,9 +31,8 @@ function onSubmit(event) {
   const passwordInput = loginForm.elements.password;
    
   if (emailInput.value === '' || passwordInput.value === '') {
-      alert('Please fill in all fields');
-     
-      return;
+
+      return alert('Please fill in all fields');
   }
   
    const formData = [...loginForm.elements].reduce((acc, field) => {
