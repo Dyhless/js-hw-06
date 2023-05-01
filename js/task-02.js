@@ -68,11 +68,15 @@ const ingredients = [
 // Создание элементов с помошью метода forEach
 const ingredientsEl = document.querySelector('#ingredients');
 
+const liElements = [];
+
 ingredients.forEach((ingredient) => {
   const li = document.createElement('li');
   li.textContent = ingredient;
-  li.classList.add('item'); 
-  ingredientsEl.appendChild(li);
+  li.classList.add('item');
+  liElements.push(li);
 });
+
+ingredientsEl.append(...liElements);
 
 console.log(ingredientsEl);
