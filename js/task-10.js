@@ -23,9 +23,21 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+const numberInput = document.querySelector('input[type="number"]');
+const createDivBtn = document.querySelector('button[type="button"]');
 const boxes = document.getElementById('boxes');
 
+createDivBtn.addEventListener('click', createBoxes);
+
 function createBoxes(amount) {
-  // тут функция должно считывать колличесво елементов введенных пользоватлем в инпут и рендерить колличесво дивов
-  
+  const numberOfDivs = Number(numberInput.value);
+  boxes.innerHTML = '';
+
+  for (let i = 0; i < numberOfDivs; i += 1) {
+    const box = document.createElement('div');
+    box.classList.add('created-box');
+    box.textContent = `Box ${i + 1}`;
+    box.style.backgroundColor = getRandomHexColor();
+    boxes.appendChild(box);
+  }
 }
