@@ -1,4 +1,6 @@
-## Acceptance criteria
+## Module 6-DOM and events
+
+### Tasks - Acceptance criteria
 
 - [x] `js-hw-06` repository created.
 - [x] Two links in the submitted homework: one to the source files and another to your working page on GitHub Pages.
